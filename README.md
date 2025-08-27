@@ -1,4 +1,4 @@
-# Capacitor NFC Plugin (@exxili/capacitor-nfc)
+# Capacitor NFC Plugin (base on @exxili/capacitor-nfc)
 
 A Capacitor plugin for reading and writing NFC tags on iOS and Android devices. This plugin allows you to:
 
@@ -81,6 +81,11 @@ Add the following to your `AndroidManifest.xml` file:
 <uses-permission android:name="android.permission.NFC" />
 <uses-feature android:name="android.hardware.nfc" android:required="true" />
 ```
+
+### notice
+
+I modify Android impl make it can read "http/https" records.
+And use TextEncoder to decode base64 result
 
 ## Usage
 
@@ -209,10 +214,10 @@ Cancels an Android NFC write operation. Android does not have a native UI for NF
 
 Adds a listener for NFC tag detection events. Returns type `NDEFMessagesTransformable`, which returns the following methods to provide the payload:
 
-* `string()`: Returns `NDEFMessages<string>`, where all payloads are strings.
-* `base64()`: Returns `NDEFMessages<string>`, where all payloads are the base64-encoded payloads read from the NFC tag.
-* `uint8Array()`: Returns `NDEFMessages<Uint8Array>`, where all payloads are the `Uint8Array` bytes from the NFC tag.
-* `numberArray()`: Returns `NDEFMessages<number[]>`, where all payloads bytes from the NFC tag represented as a `number[]`.
+- `string()`: Returns `NDEFMessages<string>`, where all payloads are strings.
+- `base64()`: Returns `NDEFMessages<string>`, where all payloads are the base64-encoded payloads read from the NFC tag.
+- `uint8Array()`: Returns `NDEFMessages<Uint8Array>`, where all payloads are the `Uint8Array` bytes from the NFC tag.
+- `numberArray()`: Returns `NDEFMessages<number[]>`, where all payloads bytes from the NFC tag represented as a `number[]`.
 
 **Parameters**:
 
@@ -274,10 +279,10 @@ interface NDEFWriteOptions<T extends string | number[] | Uint8Array = string> {
 
 Returned by `onRead` and includes the following methods to provide the payload:
 
-* `string()`: Returns `NDEFMessages<string>`, where all payloads are strings.
-* `base64()`: Returns `NDEFMessages<string>`, where all payloads are the base64-encoded payloads read from the NFC tag.
-* `uint8Array()`: Returns `NDEFMessages<Uint8Array>`, where all payloads are the `Uint8Array` bytes from the NFC tag.
-* `numberArray()`: Returns `NDEFMessages<number[]>`, where all payloads bytes from the NFC tag represented as a `number[]`.
+- `string()`: Returns `NDEFMessages<string>`, where all payloads are strings.
+- `base64()`: Returns `NDEFMessages<string>`, where all payloads are the base64-encoded payloads read from the NFC tag.
+- `uint8Array()`: Returns `NDEFMessages<Uint8Array>`, where all payloads are the `Uint8Array` bytes from the NFC tag.
+- `numberArray()`: Returns `NDEFMessages<number[]>`, where all payloads bytes from the NFC tag represented as a `number[]`.
 
 ```typescript
 interface NDEFMessagesTransformable {

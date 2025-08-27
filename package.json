@@ -1,5 +1,5 @@
 {
-  "name": "@day/capacitor-nfc",
+  "name": "@day_time/capacitor-nfc-day",
   "version": "0.0.10",
   "description": "A Capacitor plugin for reading and writing NFC NDEFtags.",
   "main": "dist/plugin.cjs.js",
