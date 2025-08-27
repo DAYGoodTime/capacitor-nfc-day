@@ -1,6 +1,6 @@
 {
-  "name": "@exxili/capacitor-nfc",
-  "version": "0.0.9",
+  "name": "@day/capacitor-nfc",
+  "version": "0.0.10",
   "description": "A Capacitor plugin for reading and writing NFC NDEFtags.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -12,17 +12,13 @@
     "dist/",
     "ios/Sources",
     "ios/Tests",
-    "Package.swift",
-    "ExxiliCapacitorNfc.podspec"
+    "Package.swift"
   ],
-  "author": "Exxili",
+  "author": "DAYGood_Time",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Exxili/capacitor-nfc.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Exxili/capacitor-nfc/issues"
+    "url": "git+https://github.com/DAYGood_Time/capacitor-nfc-day.git"
   },
   "keywords": [
     "capacitor",

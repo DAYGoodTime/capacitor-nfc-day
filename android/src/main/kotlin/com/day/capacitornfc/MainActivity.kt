@@ -1,4 +1,4 @@
-package com.exxili.capacitornfc
+package com.day.capacitornfc
 
 import android.os.Bundle
 import com.getcapacitor.BridgeActivity
